@@ -53,3 +53,31 @@ ob.fun3()
 print(Demo.__dict__)
 
 # change argument and got answer but when run i am not getting the value 20 
+
+
+# another way 
+class Demo:
+    a  =10
+    def __init__(self):
+        Demo.a = 20
+        print(Demo.a)
+    def fun1(self):
+        Demo.a=30
+        print(Demo.a)
+    @classmethod
+    def fun2(cls):
+        Demo.a = 40
+        
+        print(Demo.a)
+      
+    @staticmethod
+    def fun3():
+        Demo.a = 60
+        print(Demo.a)
+print(Demo.a)
+ob = Demo
+ob.fun1(30)
+ob.fun2()
+ob.fun3()
+print(Demo.__dict__)
+
