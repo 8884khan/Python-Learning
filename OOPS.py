@@ -50,5 +50,30 @@ p2 = person.frombirthdate("shahbaz",1992)
 print(p1.age)
 print(p2.age)
 
+print("------------------------------------------------")
 
+class Student:
+    def __init__(self,n,m):
+        self.name = n
+        self.marks = m
+    def display(self):
+        print("Name = ",self.name,"Marks= ",self.marks)
+    def grade(self):
+        if self.marks >= 75:
+            print("First grade")
+        elif self.marks >=50:
+            print("Sencod class")
+        elif self.marks >=35:
+            print("Third class")
+        else:
+            print("Failed")
+n = int(input("Enter the number of Students:- "))
+for i in range(n):
+    name = input("Enter Student name:- ")
+    marks = int(input("Enter the marks:- "))
+    s=Student(name,marks)
+    s.display()
+    s.grade()
+    
+    
 
