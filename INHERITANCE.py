@@ -9,7 +9,7 @@ cc = B()
 cc.m1()
 cc.m2()
 
-print("-------------------------")
+print("=================================")
 
 #multi level ingeritance
 class A:
@@ -25,4 +25,29 @@ ob = C()
 ob.m1()
 ob.m2()
 ob.m3()
+print("===================================")
+#multipple Inheritance another example
+class A:
+    def m(self):
+        print("parent1")
+class B:
+    def m(self):
+        print("Parent 2")
+class C(B,A):
+    pass
+cc = C()
+cc.m()
+
+
+
+class A:
+    def m(self):
+        print("parent1")
+class B:
+    def m(self):
+        print("Parent 2")
+class C(A,B):
+    pass
+cc = C()
+cc.m()
 
