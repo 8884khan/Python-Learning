@@ -81,3 +81,33 @@ ob.fun2()
 ob.fun3()
 print(Demo.__dict__)
 
+
+print("-----------------------------------------------")
+
+class Demo:
+    def add(self,x=None,y=None,z=None):
+        if x!=None and y!=None and z!=None:
+            print("Sum = ",x+y+z)
+        elif x!=None and y!=None:
+            print("sum= ",x+y)
+        else:
+            print("pgm is to add 3 nos ... provide atlest 2 values")
+d = Demo()
+d.add(10,20,30)
+d.add(20,50)
+d.add()
+
+print("---------------------------------------------------")
+
+class Demo:
+    def add(self,*x):
+        sum = 0;
+        for i in x:
+            sum = sum+i
+        print(sum)
+d = Demo()
+d.add(10,20,30)
+d.add(20,10)
+d.add(10)
+
+
